@@ -21,7 +21,6 @@ def config():
             choices=[ "Controlled_Images_A", "Controlled_Images_B", \
             "COCO_QA_one_obj", "COCO_QA_two_obj", "VG_QA_one_obj", "VG_QA_two_obj", "VSR"])
     parser.add_argument("--seed", default=1, type=int)
-    parser.add_argument("--mode",  type=str)
     parser.add_argument("--method",  type=str)
     parser.add_argument("--eval",  type=str)
     parser.add_argument("--dola-decoding",   action="store_true")
@@ -50,7 +49,7 @@ def main(args):
     #split val and test set    
     if SAMPLE==True:  
         total_data_count = len(dataset)
-        idx_file_path = f'./plot/outputs/sampled_idx_{args.dataset}_{args.mode}.npy'
+        idx_file_path = f'./plot/outputs/sampled_idx_{args.dataset}.npy'
         if os.path.exists(idx_file_path):
             sampled_indices = np.load(idx_file_path).tolist()
         else:
@@ -69,20 +68,20 @@ def main(args):
     else:       
         joint_loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, collate_fn=collate_fn)
 
-    print(args.dataset,args.mode,args.model_name)
+    print(args.dataset,args.model_name)
     if args.dataset=='VSR':
         labels=dataset.get_labels()
-        scores = model.get_judge_scores_vsr_batched(args.dataset,joint_loader,args.mode,args.method,args.weight,args.threshold,args.weight1,args.weight2)
-        result_records = dataset.evaluate_scores(args.model_name,scores, labels, args.output_dir,args.dataset,args.mode)
+        scores = model.get_judge_scores_vsr_batched(args.dataset,joint_loader,args.method,args.weight,args.threshold,args.weight1,args.weight2)
+        result_records = dataset.evaluate_scores(args.model_name,scores, labels, args.output_dir,args.dataset)
    
 
     elif args.dataset in ['Controlled_Images_B','Controlled_Images_A']:    
-        scores = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.mode,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)    
+        scores = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)    
         
     else:
         
-        scores,correct_id = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.mode,args.method,args.weight,args.option)
-        dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.mode,args.method,args.eval,args.weight,args.model_name,args.option)
+        scores,correct_id = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.method,args.weight,args.option)
+        dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.method,args.eval,args.weight,args.model_name,args.option)
 
         
 if __name__ == "__main__":

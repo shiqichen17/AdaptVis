@@ -11,13 +11,13 @@ from torch.utils.data import Dataset
 from easydict import EasyDict as edict
 from torchvision.datasets.utils import download_url
 
-from .perturbations import TextShuffler
-from .constants import ARO_ROOT, COCO_ROOT, FLICKR_ROOT
-from .retrieval import pre_caption
+# from .perturbations import TextShuffler
+# from .constants import ARO_ROOT, COCO_ROOT
+# from .retrieval import pre_caption
 
 SAMPLE=True
 class VSR(Dataset):
-    def __init__(self, image_preprocess=None, root_dir=COCO_ROOT, max_words=30, split="test",
+    def __init__(self, image_preprocess=None, root_dir='data', max_words=30, split="test",
                  image_perturb_fn=None, download=False):  
         """
         COCO Order Dataset.
@@ -156,7 +156,7 @@ class VSR(Dataset):
 
 
 class Controlled_Images(Dataset):
-    def __init__(self, image_preprocess, text_perturb_fn=None, image_perturb_fn=None, root_dir=ARO_ROOT, download=False, subset='A'):
+    def __init__(self, image_preprocess, text_perturb_fn=None, image_perturb_fn=None, root_dir='data', download=False, subset='A'):
         self.root_dir = root_dir
         if subset == 'A':
             annotation_file = os.path.join(root_dir, "controlled_images_dataset.json")
@@ -338,7 +338,7 @@ class Controlled_Images(Dataset):
 
 
 class COCO_QA(Dataset):
-    def __init__(self, image_preprocess, text_perturb_fn=None, image_perturb_fn=None, root_dir=ARO_ROOT, download=False, subset='one'):
+    def __init__(self, image_preprocess, text_perturb_fn=None, image_perturb_fn=None, root_dir='data', download=False, subset='one'):
         self.root_dir = root_dir
         if subset == 'one':
             annotation_file = os.path.join(root_dir, "coco_qa_one_obj.json")
@@ -471,7 +471,7 @@ class COCO_QA(Dataset):
         return result_records
 
 class VG_QA(Dataset):
-    def __init__(self, image_preprocess, text_perturb_fn=None, image_perturb_fn=None, root_dir=ARO_ROOT, download=False, subset='one'):
+    def __init__(self, image_preprocess, text_perturb_fn=None, image_perturb_fn=None, root_dir='data', download=False, subset='one'):
         self.root_dir = root_dir
         if subset == 'one':
             annotation_file = os.path.join(root_dir, "vg_qa_one_obj.json")
@@ -620,7 +620,7 @@ def get_vg_qa_two_obj(image_preprocess, text_perturb_fn=None, image_perturb_fn=N
                    image_perturb_fn=image_perturb_fn, download=download, subset='two')
 
 
-def get_vsr(image_preprocess, image_perturb_fn, text_perturb_fn, max_words=30, download=False, root_dir=FLICKR_ROOT, split="test"):
+def get_vsr(image_preprocess, image_perturb_fn, text_perturb_fn, max_words=30, download=False, root_dir='data', split="test"):
     return VSR(root_dir=root_dir, split=split, image_preprocess=image_preprocess, image_perturb_fn=image_perturb_fn, max_words=max_words, 
                             download=download)
 

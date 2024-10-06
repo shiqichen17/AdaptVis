@@ -1,0 +1,440 @@
+{"id": 0, "question": "<image>\nUSER: Where is the dining table in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 1, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 2, "question": "<image>\nUSER:  Where is the toilet in relation to the sink? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 3, "question": "<image>\nUSER: Where is the TV in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 4, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 5, "question": "<image>\nUSER:  Where is the bird in relation to the giraffe? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 6, "question": "<image>\nUSER: Where is the bird in relation to the giraffe? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 7, "question": "<image>\nUSER: Where is the bird in relation to the cow? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 8, "question": "<image>\nUSER: Where is the cat in relation to the TV? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 9, "question": "<image>\nUSER: Where is the bed in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 10, "question": "<image>\nUSER:  Where is the cake in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 11, "question": "<image>\nUSER: Where is the chair in relation to the pizza? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 12, "question": "<image>\nUSER:  Where is the laptop in relation to the mouse? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 13, "question": "<image>\nUSER: Where is the mouse in relation to the keyboard? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 14, "question": "<image>\nUSER:  Where is the mouse in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 15, "question": "<image>\nUSER:  Where is the microwave in relation to the oven? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 16, "question": "<image>\nUSER: Where is the microwave in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 17, "question": "<image>\nUSER:  Where is the microwave in relation to the refrigerator? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 18, "question": "<image>\nUSER: Where is the oven in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 19, "question": "<image>\nUSER: Where is the car in relation to the bus? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 20, "question": "<image>\nUSER: Where is the bed in relation to the toilet? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 21, "question": "<image>\nUSER: Where is the cat in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 22, "question": "<image>\nUSER: Where is the cat in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 23, "question": "<image>\nUSER: Where is the mouse in relation to the keyboard? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 24, "question": "<image>\nUSER:  Where is the fork in relation to the cup? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 25, "question": "<image>\nUSER:  Where is the apple in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 26, "question": "<image>\nUSER: Where is the wine glass in relation to the cup? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 27, "question": "<image>\nUSER:  Where is the person in relation to the laptop? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 28, "question": "<image>\nUSER: Where is the person in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 29, "question": "<image>\nUSER: Where is the pizza in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 30, "question": "<image>\nUSER:  Where is the TV in relation to the pizza? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 31, "question": "<image>\nUSER: Where is the cup in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 32, "question": "<image>\nUSER: Where is the bowl in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 33, "question": "<image>\nUSER: Where is the couch in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 34, "question": "<image>\nUSER: Where is the toilet in relation to the sink? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 35, "question": "<image>\nUSER:  Where is the dog in relation to the TV? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 36, "question": "<image>\nUSER:  Where is the TV in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 37, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 38, "question": "<image>\nUSER: Where is the potted plant in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 39, "question": "<image>\nUSER: Where is the dog in relation to the TV? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 40, "question": "<image>\nUSER: Where is the bench in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 41, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 42, "question": "<image>\nUSER:  Where is the TV in relation to the couch? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 43, "question": "<image>\nUSER: Where is the toilet in relation to the sink? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 44, "question": "<image>\nUSER:  Where is the toilet in relation to the sink? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 45, "question": "<image>\nUSER: Where is the dog in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 46, "question": "<image>\nUSER: Where is the cup in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 47, "question": "<image>\nUSER:  Where is the potted plant in relation to the TV? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 48, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 49, "question": "<image>\nUSER: Where is the person in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 50, "question": "<image>\nUSER: Where is the cat in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 51, "question": "<image>\nUSER: Where is the toilet in relation to the sink? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 52, "question": "<image>\nUSER: Where is the refrigerator in relation to the bed? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 53, "question": "<image>\nUSER:  Where is the refrigerator in relation to the bed? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 54, "question": "<image>\nUSER: Where is the refrigerator in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 55, "question": "<image>\nUSER:  Where is the refrigerator in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 56, "question": "<image>\nUSER: Where is the refrigerator in relation to the microwave? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 57, "question": "<image>\nUSER: Where is the bed in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 58, "question": "<image>\nUSER: Where is the bed in relation to the microwave? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 59, "question": "<image>\nUSER:  Where is the bed in relation to the microwave? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 60, "question": "<image>\nUSER: Where is the chair in relation to the microwave? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 61, "question": "<image>\nUSER:  Where is the knife in relation to the wine glass? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 62, "question": "<image>\nUSER: Where is the chair in relation to the bicycle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 63, "question": "<image>\nUSER: Where is the couch in relation to the bicycle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 64, "question": "<image>\nUSER:  Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 65, "question": "<image>\nUSER:  Where is the bench in relation to the teddy bear? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 66, "question": "<image>\nUSER:  Where is the couch in relation to the oven? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 67, "question": "<image>\nUSER: Where is the car in relation to the motorcycle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 68, "question": "<image>\nUSER:  Where is the dog in relation to the cell phone? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 69, "question": "<image>\nUSER: Where is the bottle in relation to the cake? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 70, "question": "<image>\nUSER: Where is the bottle in relation to the teddy bear? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 71, "question": "<image>\nUSER: Where is the cake in relation to the teddy bear? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 72, "question": "<image>\nUSER: Where is the cup in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 73, "question": "<image>\nUSER: Where is the chair in relation to the bottle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 74, "question": "<image>\nUSER:  Where is the dining table in relation to the refrigerator? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 75, "question": "<image>\nUSER:  Where is the orange in relation to the cup? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 76, "question": "<image>\nUSER:  Where is the person in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 77, "question": "<image>\nUSER: Where is the cup in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 78, "question": "<image>\nUSER: Where is the bottle in relation to the sandwich? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 79, "question": "<image>\nUSER: Where is the bottle in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 80, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 81, "question": "<image>\nUSER: Where is the chair in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 82, "question": "<image>\nUSER:  Where is the chair in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 83, "question": "<image>\nUSER: Where is the car in relation to the truck? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 84, "question": "<image>\nUSER: Where is the person in relation to the elephant? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 85, "question": "<image>\nUSER: Where is the bowl in relation to the sandwich? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 86, "question": "<image>\nUSER: Where is the TV in relation to the bed? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 87, "question": "<image>\nUSER:  Where is the TV in relation to the bed? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 88, "question": "<image>\nUSER:  Where is the couch in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 89, "question": "<image>\nUSER: Where is the couch in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 90, "question": "<image>\nUSER: Where is the couch in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 91, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 92, "question": "<image>\nUSER:  Where is the toilet in relation to the sink? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 93, "question": "<image>\nUSER: Where is the train in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 94, "question": "<image>\nUSER: Where is the cat in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 95, "question": "<image>\nUSER: Where is the horse in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 96, "question": "<image>\nUSER:  Where is the surfboard in relation to the bed? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 97, "question": "<image>\nUSER: Where is the bed in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 98, "question": "<image>\nUSER:  Where is the cup in relation to the fork? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 99, "question": "<image>\nUSER:  Where is the fork in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 100, "question": "<image>\nUSER:  Where is the person in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 101, "question": "<image>\nUSER: Where is the TV in relation to the mouse? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 102, "question": "<image>\nUSER: Where is the TV in relation to the mouse? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 103, "question": "<image>\nUSER:  Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 104, "question": "<image>\nUSER: Where is the bottle in relation to the mouse? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 105, "question": "<image>\nUSER: Where is the person in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 106, "question": "<image>\nUSER: Where is the oven in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 107, "question": "<image>\nUSER: Where is the toilet in relation to the sink? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 108, "question": "<image>\nUSER: Where is the TV in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 109, "question": "<image>\nUSER: Where is the dog in relation to the cup? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 110, "question": "<image>\nUSER: Where is the bottle in relation to the wine glass? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 111, "question": "<image>\nUSER: Where is the sandwich in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 112, "question": "<image>\nUSER:  Where is the person in relation to the TV? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 113, "question": "<image>\nUSER:  Where is the bed in relation to the TV? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 114, "question": "<image>\nUSER:  Where is the person in relation to the tennis racket? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 115, "question": "<image>\nUSER: Where is the person in relation to the handbag? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 116, "question": "<image>\nUSER:  Where is the person in relation to the handbag? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 117, "question": "<image>\nUSER: Where is the person in relation to the bottle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 118, "question": "<image>\nUSER:  Where is the person in relation to the bottle? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 119, "question": "<image>\nUSER: Where is the laptop in relation to the bottle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 120, "question": "<image>\nUSER: Where is the laptop in relation to the book? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 121, "question": "<image>\nUSER: Where is the laptop in relation to the backpack? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 122, "question": "<image>\nUSER:  Where is the person in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 123, "question": "<image>\nUSER: Where is the bowl in relation to the bed? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 124, "question": "<image>\nUSER:  Where is the knife in relation to the bottle? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 125, "question": "<image>\nUSER:  Where is the bird in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 126, "question": "<image>\nUSER: Where is the person in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 127, "question": "<image>\nUSER:  Where is the chair in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 128, "question": "<image>\nUSER: Where is the bus in relation to the truck? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 129, "question": "<image>\nUSER: Where is the car in relation to the elephant? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 130, "question": "<image>\nUSER: Where is the remote in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 131, "question": "<image>\nUSER:  Where is the book in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 132, "question": "<image>\nUSER: Where is the refrigerator in relation to the microwave? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 133, "question": "<image>\nUSER:  Where is the cup in relation to the scissors? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 134, "question": "<image>\nUSER:  Where is the couch in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 135, "question": "<image>\nUSER: Where is the dog in relation to the potted plant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 136, "question": "<image>\nUSER:  Where is the umbrella in relation to the bench? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 137, "question": "<image>\nUSER:  Where is the bottle in relation to the cell phone? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 138, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 139, "question": "<image>\nUSER: Where is the laptop in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 140, "question": "<image>\nUSER:  Where is the keyboard in relation to the TV? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 141, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 142, "question": "<image>\nUSER:  Where is the refrigerator in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 143, "question": "<image>\nUSER: Where is the potted plant in relation to the microwave? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 144, "question": "<image>\nUSER: Where is the potted plant in relation to the oven? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 145, "question": "<image>\nUSER: Where is the refrigerator in relation to the backpack? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 146, "question": "<image>\nUSER: Where is the toilet in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 147, "question": "<image>\nUSER:  Where is the toilet in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 148, "question": "<image>\nUSER:  Where is the sink in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 149, "question": "<image>\nUSER: Where is the bicycle in relation to the backpack? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 150, "question": "<image>\nUSER: Where is the bicycle in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 151, "question": "<image>\nUSER: Where is the backpack in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 152, "question": "<image>\nUSER:  Where is the person in relation to the giraffe? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 153, "question": "<image>\nUSER:  Where is the dining table in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 154, "question": "<image>\nUSER: Where is the cup in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 155, "question": "<image>\nUSER:  Where is the TV in relation to the laptop? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 156, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 157, "question": "<image>\nUSER: Where is the car in relation to the bus? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 158, "question": "<image>\nUSER: Where is the bus in relation to the truck? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 159, "question": "<image>\nUSER:  Where is the umbrella in relation to the sports ball? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 160, "question": "<image>\nUSER:  Where is the dog in relation to the cake? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 161, "question": "<image>\nUSER:  Where is the chair in relation to the cake? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 162, "question": "<image>\nUSER:  Where is the banana in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 163, "question": "<image>\nUSER: Where is the TV in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 164, "question": "<image>\nUSER:  Where is the TV in relation to the laptop? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 165, "question": "<image>\nUSER: Where is the laptop in relation to the TV? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 166, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 167, "question": "<image>\nUSER:  Where is the toilet in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 168, "question": "<image>\nUSER: Where is the bottle in relation to the apple? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 169, "question": "<image>\nUSER: Where is the bottle in relation to the sandwich? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 170, "question": "<image>\nUSER: Where is the oven in relation to the sink? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 171, "question": "<image>\nUSER:  Where is the oven in relation to the microwave? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 172, "question": "<image>\nUSER: Where is the sink in relation to the microwave? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 173, "question": "<image>\nUSER:  Where is the sink in relation to the microwave? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 174, "question": "<image>\nUSER:  Where is the car in relation to the train? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 175, "question": "<image>\nUSER: Where is the car in relation to the truck? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 176, "question": "<image>\nUSER: Where is the sandwich in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 177, "question": "<image>\nUSER: Where is the bed in relation to the couch? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 178, "question": "<image>\nUSER: Where is the person in relation to the pizza? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 179, "question": "<image>\nUSER: Where is the couch in relation to the dog? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 180, "question": "<image>\nUSER: Where is the refrigerator in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 181, "question": "<image>\nUSER: Where is the person in relation to the toilet? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 182, "question": "<image>\nUSER:  Where is the dog in relation to the TV? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 183, "question": "<image>\nUSER:  Where is the TV in relation to the cat? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 184, "question": "<image>\nUSER:  Where is the potted plant in relation to the car? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 185, "question": "<image>\nUSER:  Where is the potted plant in relation to the umbrella? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 186, "question": "<image>\nUSER:  Where is the car in relation to the umbrella? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 187, "question": "<image>\nUSER: Where is the cup in relation to the bed? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 188, "question": "<image>\nUSER:  Where is the cup in relation to the bed? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 189, "question": "<image>\nUSER:  Where is the spoon in relation to the cup? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 190, "question": "<image>\nUSER:  Where is the bed in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 191, "question": "<image>\nUSER: Where is the dining table in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 192, "question": "<image>\nUSER:  Where is the person in relation to the pizza? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 193, "question": "<image>\nUSER:  Where is the person in relation to the sandwich? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 194, "question": "<image>\nUSER: Where is the pizza in relation to the cup? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 195, "question": "<image>\nUSER: Where is the cup in relation to the sandwich? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 196, "question": "<image>\nUSER: Where is the TV in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 197, "question": "<image>\nUSER:  Where is the potted plant in relation to the laptop? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 198, "question": "<image>\nUSER: Where is the person in relation to the microwave? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 199, "question": "<image>\nUSER: Where is the cup in relation to the sandwich? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 200, "question": "<image>\nUSER:  Where is the cup in relation to the hot dog? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 201, "question": "<image>\nUSER: Where is the cup in relation to the book? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 202, "question": "<image>\nUSER: Where is the bowl in relation to the bottle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 203, "question": "<image>\nUSER:  Where is the bowl in relation to the bottle? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 204, "question": "<image>\nUSER: Where is the train in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 205, "question": "<image>\nUSER: Where is the person in relation to the toilet? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 206, "question": "<image>\nUSER: Where is the dog in relation to the fire hydrant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 207, "question": "<image>\nUSER:  Where is the dog in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 208, "question": "<image>\nUSER: Where is the dog in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 209, "question": "<image>\nUSER: Where is the horse in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 210, "question": "<image>\nUSER: Where is the sandwich in relation to the donut? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 211, "question": "<image>\nUSER:  Where is the sandwich in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 212, "question": "<image>\nUSER:  Where is the donut in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 213, "question": "<image>\nUSER:  Where is the bed in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 214, "question": "<image>\nUSER: Where is the dining table in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 215, "question": "<image>\nUSER: Where is the potted plant in relation to the surfboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 216, "question": "<image>\nUSER:  Where is the refrigerator in relation to the surfboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 217, "question": "<image>\nUSER: Where is the dog in relation to the bench? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 218, "question": "<image>\nUSER: Where is the TV in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 219, "question": "<image>\nUSER: Where is the TV in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 220, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 221, "question": "<image>\nUSER: Where is the refrigerator in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 222, "question": "<image>\nUSER: Where is the bus in relation to the truck? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 223, "question": "<image>\nUSER:  Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 224, "question": "<image>\nUSER: Where is the cat in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 225, "question": "<image>\nUSER: Where is the dog in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 226, "question": "<image>\nUSER:  Where is the person in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 227, "question": "<image>\nUSER: Where is the bed in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 228, "question": "<image>\nUSER: Where is the chair in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 229, "question": "<image>\nUSER: Where is the bird in relation to the bed? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 230, "question": "<image>\nUSER: Where is the umbrella in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 231, "question": "<image>\nUSER: Where is the bed in relation to the backpack? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 232, "question": "<image>\nUSER: Where is the bed in relation to the suitcase? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 233, "question": "<image>\nUSER: Where is the laptop in relation to the suitcase? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 234, "question": "<image>\nUSER: Where is the broccoli in relation to the bottle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 235, "question": "<image>\nUSER:  Where is the broccoli in relation to the bottle? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 236, "question": "<image>\nUSER: Where is the TV in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 237, "question": "<image>\nUSER: Where is the couch in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 238, "question": "<image>\nUSER: Where is the couch in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 239, "question": "<image>\nUSER: Where is the mouse in relation to the keyboard? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 240, "question": "<image>\nUSER:  Where is the car in relation to the bench? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 241, "question": "<image>\nUSER: Where is the chair in relation to the laptop? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 242, "question": "<image>\nUSER: Where is the person in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 243, "question": "<image>\nUSER: Where is the cell phone in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 244, "question": "<image>\nUSER: Where is the keyboard in relation to the teddy bear? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 245, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 246, "question": "<image>\nUSER:  Where is the refrigerator in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 247, "question": "<image>\nUSER: Where is the chair in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 248, "question": "<image>\nUSER: Where is the chair in relation to the oven? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 249, "question": "<image>\nUSER:  Where is the cup in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 250, "question": "<image>\nUSER:  Where is the handbag in relation to the bottle? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 251, "question": "<image>\nUSER:  Where is the dining table in relation to the refrigerator? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 252, "question": "<image>\nUSER: Where is the dog in relation to the truck? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 253, "question": "<image>\nUSER: Where is the toilet in relation to the sink? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 254, "question": "<image>\nUSER:  Where is the toilet in relation to the sink? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 255, "question": "<image>\nUSER: Where is the banana in relation to the cup? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 256, "question": "<image>\nUSER: Where is the vase in relation to the cup? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 257, "question": "<image>\nUSER: Where is the cup in relation to the potted plant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 258, "question": "<image>\nUSER: Where is the motorcycle in relation to the train? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 259, "question": "<image>\nUSER:  Where is the cat in relation to the suitcase? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 260, "question": "<image>\nUSER:  Where is the chair in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 261, "question": "<image>\nUSER:  Where is the bench in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 262, "question": "<image>\nUSER:  Where is the keyboard in relation to the TV? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 263, "question": "<image>\nUSER: Where is the horse in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 264, "question": "<image>\nUSER: Where is the sandwich in relation to the car? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 265, "question": "<image>\nUSER: Where is the TV in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 266, "question": "<image>\nUSER: Where is the laptop in relation to the mouse? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 267, "question": "<image>\nUSER:  Where is the dining table in relation to the sink? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 268, "question": "<image>\nUSER:  Where is the dining table in relation to the refrigerator? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 269, "question": "<image>\nUSER: Where is the TV in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 270, "question": "<image>\nUSER:  Where is the TV in relation to the cat? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 271, "question": "<image>\nUSER: Where is the refrigerator in relation to the cat? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 272, "question": "<image>\nUSER:  Where is the refrigerator in relation to the cat? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 273, "question": "<image>\nUSER: Where is the cat in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 274, "question": "<image>\nUSER:  Where is the cat in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 275, "question": "<image>\nUSER: Where is the dog in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 276, "question": "<image>\nUSER: Where is the bottle in relation to the fork? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 277, "question": "<image>\nUSER:  Where is the bottle in relation to the fork? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 278, "question": "<image>\nUSER: Where is the fork in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 279, "question": "<image>\nUSER: Where is the fork in relation to the orange? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 280, "question": "<image>\nUSER: Where is the person in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 281, "question": "<image>\nUSER: Where is the couch in relation to the surfboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 282, "question": "<image>\nUSER: Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 283, "question": "<image>\nUSER:  Where is the laptop in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 284, "question": "<image>\nUSER: Where is the person in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 285, "question": "<image>\nUSER: Where is the person in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 286, "question": "<image>\nUSER:  Where is the bowl in relation to the oven? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 287, "question": "<image>\nUSER: Where is the toilet in relation to the sink? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 288, "question": "<image>\nUSER: Where is the bus in relation to the truck? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 289, "question": "<image>\nUSER:  Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 290, "question": "<image>\nUSER:  Where is the pizza in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 291, "question": "<image>\nUSER:  Where is the TV in relation to the remote? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 292, "question": "<image>\nUSER:  Where is the TV in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 293, "question": "<image>\nUSER:  Where is the person in relation to the remote? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 294, "question": "<image>\nUSER:  Where is the person in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 295, "question": "<image>\nUSER: Where is the potted plant in relation to the couch? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 296, "question": "<image>\nUSER: Where is the person in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 297, "question": "<image>\nUSER: Where is the bottle in relation to the microwave? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 298, "question": "<image>\nUSER: Where is the bottle in relation to the potted plant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 299, "question": "<image>\nUSER: Where is the microwave in relation to the potted plant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 300, "question": "<image>\nUSER:  Where is the bowl in relation to the couch? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 301, "question": "<image>\nUSER: Where is the horse in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 302, "question": "<image>\nUSER:  Where is the clock in relation to the potted plant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 303, "question": "<image>\nUSER:  Where is the TV in relation to the teddy bear? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 304, "question": "<image>\nUSER: Where is the TV in relation to the teddy bear? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 305, "question": "<image>\nUSER:  Where is the couch in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 306, "question": "<image>\nUSER: Where is the chair in relation to the dining table? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 307, "question": "<image>\nUSER: Where is the person in relation to the TV? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 308, "question": "<image>\nUSER: Where is the person in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 309, "question": "<image>\nUSER:  Where is the TV in relation to the couch? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 310, "question": "<image>\nUSER:  Where is the oven in relation to the microwave? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 311, "question": "<image>\nUSER: Where is the bottle in relation to the pizza? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 312, "question": "<image>\nUSER: Where is the keyboard in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 313, "question": "<image>\nUSER:  Where is the TV in relation to the couch? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 314, "question": "<image>\nUSER: Where is the TV in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 315, "question": "<image>\nUSER: Where is the dog in relation to the potted plant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 316, "question": "<image>\nUSER: Where is the dog in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 317, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 318, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 319, "question": "<image>\nUSER:  Where is the umbrella in relation to the book? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 320, "question": "<image>\nUSER:  Where is the umbrella in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 321, "question": "<image>\nUSER: Where is the book in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 322, "question": "<image>\nUSER: Where is the laptop in relation to the keyboard? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 323, "question": "<image>\nUSER: Where is the laptop in relation to the TV? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 324, "question": "<image>\nUSER: Where is the keyboard in relation to the TV? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 325, "question": "<image>\nUSER: Where is the dog in relation to the cat? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 326, "question": "<image>\nUSER:  Where is the wine glass in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 327, "question": "<image>\nUSER: Where is the TV in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 328, "question": "<image>\nUSER: Where is the TV in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 329, "question": "<image>\nUSER: Where is the bench in relation to the potted plant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 330, "question": "<image>\nUSER: Where is the chair in relation to the potted plant? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 331, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 332, "question": "<image>\nUSER: Where is the umbrella in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 333, "question": "<image>\nUSER:  Where is the umbrella in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 334, "question": "<image>\nUSER:  Where is the bowl in relation to the sandwich? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 335, "question": "<image>\nUSER: Where is the cup in relation to the sandwich? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 336, "question": "<image>\nUSER:  Where is the TV in relation to the cat? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 337, "question": "<image>\nUSER:  Where is the TV in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 338, "question": "<image>\nUSER: Where is the horse in relation to the truck? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 339, "question": "<image>\nUSER: Where is the TV in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 340, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 341, "question": "<image>\nUSER: Where is the chair in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 342, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 343, "question": "<image>\nUSER: Where is the chair in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 344, "question": "<image>\nUSER: Where is the bottle in relation to the cup? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 345, "question": "<image>\nUSER: Where is the donut in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 346, "question": "<image>\nUSER: Where is the motorcycle in relation to the airplane? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 347, "question": "<image>\nUSER: Where is the banana in relation to the sandwich? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 348, "question": "<image>\nUSER: Where is the bowl in relation to the sandwich? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 349, "question": "<image>\nUSER: Where is the chair in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 350, "question": "<image>\nUSER: Where is the person in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 351, "question": "<image>\nUSER:  Where is the laptop in relation to the handbag? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 352, "question": "<image>\nUSER:  Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 353, "question": "<image>\nUSER:  Where is the dining table in relation to the refrigerator? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 354, "question": "<image>\nUSER: Where is the sandwich in relation to the cup? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 355, "question": "<image>\nUSER: Where is the person in relation to the pizza? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 356, "question": "<image>\nUSER: Where is the pizza in relation to the book? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 357, "question": "<image>\nUSER: Where is the couch in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 358, "question": "<image>\nUSER: Where is the bottle in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 359, "question": "<image>\nUSER:  Where is the suitcase in relation to the oven? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 360, "question": "<image>\nUSER: Where is the dog in relation to the handbag? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 361, "question": "<image>\nUSER: Where is the cup in relation to the cake? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 362, "question": "<image>\nUSER:  Where is the cup in relation to the cake? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 363, "question": "<image>\nUSER: Where is the chair in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 364, "question": "<image>\nUSER: Where is the cake in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 365, "question": "<image>\nUSER:  Where is the train in relation to the bench? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 366, "question": "<image>\nUSER: Where is the bus in relation to the train? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 367, "question": "<image>\nUSER:  Where is the cat in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 368, "question": "<image>\nUSER: Where is the person in relation to the cake? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 369, "question": "<image>\nUSER: Where is the pizza in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 370, "question": "<image>\nUSER: Where is the sandwich in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 371, "question": "<image>\nUSER:  Where is the person in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 372, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 373, "question": "<image>\nUSER: Where is the TV in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 374, "question": "<image>\nUSER: Where is the couch in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 375, "question": "<image>\nUSER:  Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 376, "question": "<image>\nUSER:  Where is the kite in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 377, "question": "<image>\nUSER:  Where is the bowl in relation to the pizza? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 378, "question": "<image>\nUSER: Where is the sandwich in relation to the cup? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 379, "question": "<image>\nUSER:  Where is the cup in relation to the hot dog? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 380, "question": "<image>\nUSER: Where is the refrigerator in relation to the oven? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 381, "question": "<image>\nUSER: Where is the TV in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 382, "question": "<image>\nUSER:  Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 383, "question": "<image>\nUSER: Where is the laptop in relation to the keyboard? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 384, "question": "<image>\nUSER: Where is the TV in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 385, "question": "<image>\nUSER: Where is the bicycle in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 386, "question": "<image>\nUSER: Where is the train in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 387, "question": "<image>\nUSER:  Where is the TV in relation to the keyboard? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 388, "question": "<image>\nUSER: Where is the chair in relation to the suitcase? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 389, "question": "<image>\nUSER: Where is the banana in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 390, "question": "<image>\nUSER: Where is the cup in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 391, "question": "<image>\nUSER: Where is the cup in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 392, "question": "<image>\nUSER: Where is the cup in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 393, "question": "<image>\nUSER: Where is the person in relation to the bowl? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 394, "question": "<image>\nUSER: Where is the couch in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 395, "question": "<image>\nUSER:  Where is the couch in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 396, "question": "<image>\nUSER: Where is the chair in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 397, "question": "<image>\nUSER: Where is the TV in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 398, "question": "<image>\nUSER: Where is the cat in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 399, "question": "<image>\nUSER: Where is the carrot in relation to the dining table? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 400, "question": "<image>\nUSER:  Where is the cell phone in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 401, "question": "<image>\nUSER:  Where is the teddy bear in relation to the person? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 402, "question": "<image>\nUSER:  Where is the bicycle in relation to the truck? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 403, "question": "<image>\nUSER: Where is the toilet in relation to the sink? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 404, "question": "<image>\nUSER: Where is the cell phone in relation to the apple? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 405, "question": "<image>\nUSER: Where is the apple in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 406, "question": "<image>\nUSER:  Where is the fork in relation to the orange? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 407, "question": "<image>\nUSER: Where is the fork in relation to the cake? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 408, "question": "<image>\nUSER:  Where is the fork in relation to the wine glass? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 409, "question": "<image>\nUSER: Where is the fork in relation to the wine glass? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 410, "question": "<image>\nUSER: Where is the orange in relation to the wine glass? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 411, "question": "<image>\nUSER:  Where is the cake in relation to the wine glass? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 412, "question": "<image>\nUSER:  Where is the wine glass in relation to the hot dog? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 413, "question": "<image>\nUSER: Where is the cake in relation to the dining table? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 414, "question": "<image>\nUSER: Where is the cake in relation to the fork? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 415, "question": "<image>\nUSER:  Where is the cake in relation to the chair? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 416, "question": "<image>\nUSER:  Where is the refrigerator in relation to the book? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 417, "question": "<image>\nUSER: Where is the TV in relation to the couch? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 418, "question": "<image>\nUSER:  Where is the TV in relation to the couch? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 419, "question": "<image>\nUSER: Where is the fork in relation to the orange? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 420, "question": "<image>\nUSER: Where is the cup in relation to the orange? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 421, "question": "<image>\nUSER: Where is the cup in relation to the cake? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 422, "question": "<image>\nUSER:  Where is the orange in relation to the cake? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 423, "question": "<image>\nUSER: Where is the cup in relation to the fork? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 424, "question": "<image>\nUSER: Where is the bicycle in relation to the motorcycle? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 425, "question": "<image>\nUSER: Where is the motorcycle in relation to the person? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 426, "question": "<image>\nUSER: Where is the horse in relation to the chair? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 427, "question": "<image>\nUSER: Where is the cup in relation to the spoon? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 428, "question": "<image>\nUSER:  Where is the cup in relation to the spoon? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 429, "question": "<image>\nUSER: Where is the knife in relation to the cup? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 430, "question": "<image>\nUSER:  Where is the knife in relation to the cup? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 431, "question": "<image>\nUSER: Where is the knife in relation to the carrot? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 432, "question": "<image>\nUSER:  Where is the cup in relation to the carrot? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Above"]}
+{"id": 433, "question": "<image>\nUSER: Where is the person in relation to the laptop? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 434, "question": "<image>\nUSER: Where is the sandwich in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}
+{"id": 435, "question": "<image>\nUSER:  Where is the bowl in relation to the pizza? Answer with left, right, above or below.\nASSISTANT:", "answer": ["Below"]}
+{"id": 436, "question": "<image>\nUSER: Where is the person in relation to the truck? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 437, "question": "<image>\nUSER: Where is the book in relation to the vase? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 438, "question": "<image>\nUSER: Where is the person in relation to the bowl? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Left"]}
+{"id": 439, "question": "<image>\nUSER: Where is the bowl in relation to the refrigerator? Answer with left, right, above, or below.\nASSISTANT:", "answer": ["Right"]}

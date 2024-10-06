@@ -1,5 +1,5 @@
-from .aro_datasets import VG_Relation, VG_Attribution, COCO_Order, Flickr30k_Order, Controlled_Images, COCO_QA, VG_QA, VSR,VSRQA
-from .retrieval import COCO_Retrieval, Flickr30k_Retrieval
+from .aro_datasets import  Controlled_Images, COCO_QA, VG_QA, VSR
+# from .retrieval import COCO_Retrieval, Flickr30k_Retrieval
 
 
 def get_dataset(dataset_name, image_preprocess=None, text_perturb_fn=None, image_perturb_fn=None, download=False, *args, **kwargs):
