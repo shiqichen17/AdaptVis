@@ -6,7 +6,7 @@ Code and datasets for "AdaptVis: Spatial Understanding in Vision-Language Models
 This code is based on the code of, **What's "up" with vision-language models? Investigating their struggle with spatial reasoning** [[paper](https://arxiv.org/pdf/2310.19785)][[code](https://github.com/amitakamath/whatsup_vlms)].
 
 <p align="center">
-<img src="./figures/main.png" width="800">
+<img src="figures/main.png" width="800">
 </p>
 
 
