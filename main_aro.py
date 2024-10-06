@@ -2,73 +2,89 @@ import argparse
 import os
 import pandas as pd
 import pdb
-from torch.utils.data import DataLoader
-
 from model_zoo import get_model
 from dataset_zoo import get_dataset
 from misc import seed_all, _default_collate, save_scores
+import numpy as np
+import random
+from torch.utils.data import DataLoader
+import torch
 
 def config():
     parser = argparse.ArgumentParser()
     parser.add_argument("--device", default="cuda", type=str)
-    parser.add_argument("--batch-size", default=16, type=int)
+    parser.add_argument("--batch-size", default=1, type=int)
     parser.add_argument("--num_workers", default=16, type=int)
     parser.add_argument("--model-name", default="openai-clip:ViT-B/32", type=str, \
-            choices=["openai-clip:ViT-B/32", "openai-clip:ViT-L/14", \
-                "NegCLIP", "laion-clip:roberta-ViT-B/32", \
-                "coca", "xvlm-pretrained-4m", "xvlm-pretrained-16m", \
-                "blip-base-14m", "blip-base-129m", "flava", \
-                "coca-cap", "xvlm-flickr", "xvlm-coco", \
-                "blip-flickr-base", "blip-coco-base", "llava1.5","llava1.6","llama"])
+            choices=[ "llava1.5","llava1.6"])
     parser.add_argument("--dataset", default="VG_Relation", type=str, \
-            choices=["VG_Relation", "VG_Attribution", "COCO_Order", \
-            "Flickr30k_Order", "Controlled_Images_A", "Controlled_Images_B", \
-            "COCO_QA_one_obj", "COCO_QA_two_obj", "VG_QA_one_obj", "VG_QA_two_obj"])
+            choices=[ "Controlled_Images_A", "Controlled_Images_B", \
+            "COCO_QA_one_obj", "COCO_QA_two_obj", "VG_QA_one_obj", "VG_QA_two_obj", "VSR"])
     parser.add_argument("--seed", default=1, type=int)
     parser.add_argument("--mode",  type=str)
-    
+    parser.add_argument("--method",  type=str)
+    parser.add_argument("--eval",  type=str)
+    parser.add_argument("--dola-decoding",   action="store_true")
+    parser.add_argument("--info-layer",   type=int)
     parser.add_argument("--download", action="store_true", help="Whether to download the dataset if it doesn't exist. (Default: False)")
     parser.add_argument("--save-scores", action="store_true", help="Whether to save the scores for the retrieval to analyze later.")
     parser.add_argument("--output-dir", default="./outputs", type=str)
+    parser.add_argument("--weight", default=1.0, type=float)
+    parser.add_argument("--weight1", default=1.0, type=float)
+    parser.add_argument("--weight2", default=1.0, type=float)
+    parser.add_argument("--threshold", default=1.0, type=float)
+    parser.add_argument("--option", default='four', type=str, choices=['two','four','six'])
+
     return parser.parse_args()
 
 
 def main(args):
-
-    
-    
-    seed_all(args.seed)
-    
-    model, image_preprocess = get_model(args.model_name, args.device)
-    
+    seed_all(args.seed) 
+    model, image_preprocess = get_model(args.model_name, args.device, args.method)
     dataset = get_dataset(args.dataset, image_preprocess=image_preprocess, download=args.download)
-    # pdb.set_trace()
-    # For some models we just pass the PIL images, so we'll need to handle them in the collate_fn. 
+    SAMPLE=True
+    TEST=os.getenv('TEST_MODE', 'False') == 'True'
+    sampled_indices=None
     collate_fn = _default_collate if image_preprocess is None else None
-    
-    joint_loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, collate_fn=collate_fn)
 
-    scores = model.get_retrieval_scores_batched(joint_loader,args.mode)
-    result_records = dataset.evaluate_scores(scores,args.output_dir,args.dataset,args.mode)
-    
-    for record in result_records:
-        record.update({"Model": args.model_name, "Dataset": args.dataset, "Seed": args.seed})
-    
-    output_file = os.path.join(args.output_dir, f"{args.dataset}_{args.model_name.replace('/', '_')}.csv")
-    df = pd.DataFrame(result_records)
-    print(f"Saving results to {output_file}")
-    if os.path.exists(output_file):
-        all_df = pd.read_csv(output_file, index_col=0)
-        all_df = pd.concat([all_df, df])
-        all_df.to_csv(output_file)
+    #split val and test set    
+    if SAMPLE==True:  
+        total_data_count = len(dataset)
+        idx_file_path = f'./plot/outputs/sampled_idx_{args.dataset}_{args.mode}.npy'
+        if os.path.exists(idx_file_path):
+            sampled_indices = np.load(idx_file_path).tolist()
+        else:
+            sampled_indices = random.sample(range(total_data_count), int(0.2 * total_data_count))
+            sampled_indices.sort()
+            np.save(idx_file_path, np.array(sampled_indices))
+        all_indices = set(range(total_data_count))
+        # use test set
+        if TEST==True:
+            unsampled_indices = list(all_indices - set(sampled_indices))
+            unsampled_indices.sort()
+            sampled_indices=unsampled_indices
+        sub_dataset = torch.utils.data.Subset(dataset, sampled_indices)
+        joint_loader = DataLoader(sub_dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, collate_fn=collate_fn)
+    #use full set
+    else:       
+        joint_loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, collate_fn=collate_fn)
 
-    else:
-        df.to_csv(output_file)
+    print(args.dataset,args.mode,args.model_name)
+    if args.dataset=='VSR':
+        labels=dataset.get_labels()
+        scores = model.get_judge_scores_vsr_batched(args.dataset,joint_loader,args.mode,args.method,args.weight,args.threshold,args.weight1,args.weight2)
+        result_records = dataset.evaluate_scores(args.model_name,scores, labels, args.output_dir,args.dataset,args.mode)
+   
+
+    elif args.dataset in ['Controlled_Images_B','Controlled_Images_A']:    
+        scores = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.mode,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)    
         
-    if args.save_scores:
-        save_scores(scores, args)
+    else:
+        
+        scores,correct_id = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.mode,args.method,args.weight,args.option)
+        dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.mode,args.method,args.eval,args.weight,args.model_name,args.option)
 
-    
+        
 if __name__ == "__main__":
     args = config()
     main(args)
