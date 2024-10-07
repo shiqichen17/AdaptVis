@@ -37,15 +37,54 @@ You can fast implement an example by:
 bash run.sh
 ```
 ### Argument
-| Argument      | Example          | Description                                                                                   |
-|---------------|------------------|-----------------------------------------------------------------------------------------------|
-| `--dataset`   | `Controlled_Images_A` | Dataset for evaluation (`Controlled_Images_A`, `Controlled_Images_B`, etc.).                   |
-| `--model_name`| `llava1.5`       | Model to use.                                                                                 |
-| `--method`    | `scaling_vis`    | Evaluation method (`scaling_vis` or `adapt_vis`).                                             |
-| `--weight`    | `1.2`            | Scaling coefficient, options: `[0, 0.5, 0.8, 1.2, 1.5, 2.0]`.                                  |
-| `--weight1`   | `0.5`            | Coefficient for AdaptVis, options: `[0.5, 0.8]`.                                              |
-| `--weight2`   | `1.2`            | Coefficient for AdaptVis, options: `[1.2, 1.5, 2.0]`.                                         |
-| `--threshold` | `0.3`            | Threshold for AdaptVis.                                                                        |
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Argument</th>
+      <th style="width: 20%;">Example</th>
+      <th style="width: 60%;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--dataset</code></td>
+      <td><code>Controlled_Images_A</code></td>
+      <td>Dataset for evaluation (<code>Controlled_Images_A</code>, <code>Controlled_Images_B</code>, etc.).</td>
+    </tr>
+    <tr>
+      <td><code>--model</code></td>
+      <td><code>llava1.5</code></td>
+      <td>Model to use.</td>
+    </tr>
+    <tr>
+      <td><code>--method</code></td>
+      <td><code>scaling_vis</code></td>
+      <td>Evaluation method (<code>scaling_vis</code> or <code>adapt_vis</code>).</td>
+    </tr>
+    <tr>
+      <td><code>--weight</code></td>
+      <td><code>1.2</code></td>
+      <td>Scaling coefficient, options: <code>[0.5, 0.8, 1.2, 1.5, 2.0]</code>.</td>
+    </tr>
+    <tr>
+      <td><code>--weight1</code></td>
+      <td><code>0.5</code></td>
+      <td>Coefficient for AdaptVis, options: <code>[0.5, 0.8]</code>.</td>
+    </tr>
+    <tr>
+      <td><code>--weight2</code></td>
+      <td><code>1.2</code></td>
+      <td>Coefficient for AdaptVis, options: <code>[1.2, 1.5, 2.0]</code>.</td>
+    </tr>
+    <tr>
+      <td><code>--th</code></td>
+      <td><code>0.3</code></td>
+      <td>Threshold for AdaptVis.</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 # Citation
