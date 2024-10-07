@@ -38,7 +38,7 @@ bash run.sh
 ```
 ### Argument
 | Argument          | Example           | Description   |
-| ----------------- | ----------------- | ------------- |
+| --------------------- | ----------------- | ------------- |
 | `--dataset`    | `Controlled_Images_A` | Specifies the dataset you want to evaluate, can choose from `Controlled_Images_A, Controlled_Images_B,COCO_QA_one_obj,COCO_QA_two_obj,VG_QA_one_obj,VG_QA_two_obj`. |
 | `--model_name`     | `llava1.5` | Specifies the model you want to use. |
 | `--method`     | `scaling_vis` | The method for evaluation. Can choose from `"scaling_vis" or "adapt_vis"` |
