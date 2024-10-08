@@ -7,7 +7,7 @@ import random
 from transformers import AutoProcessor, LlamaTokenizerFast, CLIPImageProcessor
 import pdb
 # import probe_llava
-from .probe_llava import  LlavaForConditionalGeneration, LlavaForConditionalGenerationAddAttn
+from .llava import  LlavaForConditionalGeneration, LlavaForConditionalGenerationScal
 
 import torch
 import torch.nn.functional as F
@@ -16,7 +16,7 @@ import requests
 import json
 import os
 from collections import Counter
-from model_zoo.utils import normalize_answer,chat_completion_request,run_conversation
+# from model_zoo.utils import normalize_answer,chat_completion_request,run_conversation
 
 from PIL import Image
 import math
@@ -125,7 +125,7 @@ def _add_weight_greedy_search(
         model_inputs = self.prepare_inputs_for_generation(input_ids, **model_kwargs)
         import pdb
         # 
-        if 'AddAttn' not in str(type(self)):
+        if 'Scal' not in str(type(self)):
             outputs = self(
                 **model_inputs,
                
@@ -234,9 +234,9 @@ def change_greedy_to_add_weight():
 
 class LlavaWrapper:
     def __init__(self, root_dir, device,method):
-
+        
         if method=='scaling_vis' or method=='adapt_vis':
-            self.model = LlavaForConditionalGenerationAddAttn.from_pretrained(MODEL, cache_dir=root_dir,ignore_mismatched_sizes=True).eval().to(device)
+            self.model = LlavaForConditionalGenerationScal.from_pretrained(MODEL, cache_dir=root_dir,ignore_mismatched_sizes=True).eval().to(device)
 
         else:
             self.model = LlavaForConditionalGeneration.from_pretrained(MODEL, cache_dir=root_dir,ignore_mismatched_sizes=True).eval().to(device)
@@ -285,7 +285,7 @@ class LlavaWrapper:
     
     
     @torch.no_grad()
-    def get_out_scores_wh_batched(self, dataset, joint_loader, mode, method, weight, option, threshold, weight1, weight2):
+    def get_out_scores_wh_batched(self, dataset, joint_loader, method, weight, option, threshold, weight1, weight2):
 
         
         scores = []  # To store scores for each batch
@@ -305,12 +305,9 @@ class LlavaWrapper:
             for line in file:
                 data = json.loads(line)
                 # Select prompt based on mode
-                if mode == 'begin' or mode == 'flip':
-                    prompt_list.append(data["begin"])
-                elif mode == 'middle':
-                    prompt_list.append(data["middle"])
-                elif mode == 'end':
-                    prompt_list.append(data["end"])
+                
+                prompt_list.append(data["begin"])
+                
                 # Store additional prompts if adjustment method is 'sub'
                 
                 answer_list.append(data["answer"])
@@ -322,7 +319,7 @@ class LlavaWrapper:
         
         # Perform sampling if enabled
         if SAMPLE:
-            idx_file_path = f'./outputs/sampled_idx_{dataset}_{mode}.npy'
+            idx_file_path = f'./output/sampled_idx_{dataset}.npy'
             
             if os.path.exists(idx_file_path):
                 sampled_indices = np.load(idx_file_path).tolist()
@@ -343,7 +340,7 @@ class LlavaWrapper:
             answer_list = [answer_list[i] for i in sampled_indices]
 
         # Create directory for saving attention maps
-        save_attn_dir = f"/home/user/shiqi/mmlm_mech/whatsup_vlms/outputs/{dataset}_{mode}_weight{weight:.2f}"
+        save_attn_dir = f"/home/user/shiqi/mmlm_mech/whatsup_vlms/outputs/{dataset}_weight{weight:.2f}"
         os.makedirs(save_attn_dir, exist_ok=True)
 
         results = []  # Store results for each generated sequence
@@ -448,7 +445,7 @@ class LlavaWrapper:
             scores.append(batch_scores)
 
             # Save results to file
-            output_file_path = f'./outputs/results1.5_{dataset}_{mode}_{method}_{weight}_{option}option_{TEST}.json'
+            output_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{option}option_{TEST}.json'
             print("Saving results to", output_file_path)
             with open(output_file_path, 'w', encoding='utf-8') as fout:
                 json.dump(results, fout, ensure_ascii=False, indent=4)
@@ -470,14 +467,14 @@ class LlavaWrapper:
     
     
     @torch.no_grad()
-    def get_judge_scores_vsr_batched(self, dataset, joint_loader, mode, method, weight, threshold, weight1, weight2):
+    def get_judge_scores_vsr_batched(self, dataset, joint_loader, method, weight, threshold, weight1, weight2):
         
         
         index = 0
         TP, TN, FP, FN = 0, 0, 0, 0
 
         # Set the directory to save attention maps
-        save_attn_dir = f"/home/user/shiqi/mmlm_mech/whatsup_vlms/outputs/{dataset}_{mode}_weight{weight:.2f}"
+        save_attn_dir = f"/home/user/shiqi/mmlm_mech/whatsup_vlms/outputs/{dataset}_weight{weight:.2f}"
         if not os.path.exists(save_attn_dir):
             print("Creating directory for saving attention maps:", save_attn_dir)
             os.makedirs(save_attn_dir)
@@ -573,7 +570,7 @@ class LlavaWrapper:
         all_scores = (TP, TN, FP, FN)
         
         # Save results to JSON file
-        output_file_path = f'./outputs/results_{dataset}_{mode}_{method}_{weight}.json'
+        output_file_path = f'./outputs/results_{dataset}_{method}_{weight}.json'
         with open(output_file_path, 'w', encoding='utf-8') as fout:
             json.dump(results, fout, ensure_ascii=False, indent=4)
         

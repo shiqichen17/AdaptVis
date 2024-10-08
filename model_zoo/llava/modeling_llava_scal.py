@@ -16,7 +16,7 @@
 from dataclasses import dataclass
 from typing import List, Optional, Tuple, Union
 import pdb
-import llama
+from model_zoo import llama
 import torch
 import torch.utils.checkpoint
 from torch import nn
@@ -39,7 +39,7 @@ from transformers.utils import (
 # from transformers.auto import AutoModel, AutoModelForCausalLM
 from transformers import AutoModel, AutoModelForCausalLM
 from .configuration_llava import LlavaConfig
-from llama.configuration_llama import LLaMAConfig
+from model_zoo.llama.configuration_llama import LLaMAConfig
 
 logger = logging.get_logger(__name__)
 

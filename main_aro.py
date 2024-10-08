@@ -15,14 +15,13 @@ def config():
     parser.add_argument("--device", default="cuda", type=str)
     parser.add_argument("--batch-size", default=1, type=int)
     parser.add_argument("--num_workers", default=16, type=int)
-    parser.add_argument("--model-name", default="openai-clip:ViT-B/32", type=str, \
+    parser.add_argument("--model-name", default="llava1.5", type=str, \
             choices=[ "llava1.5","llava1.6"])
-    parser.add_argument("--dataset", default="VG_Relation", type=str, \
+    parser.add_argument("--dataset", default="Controlled_Images_A", type=str, \
             choices=[ "Controlled_Images_A", "Controlled_Images_B", \
             "COCO_QA_one_obj", "COCO_QA_two_obj", "VG_QA_one_obj", "VG_QA_two_obj", "VSR"])
     parser.add_argument("--seed", default=1, type=int)
     parser.add_argument("--method",  type=str)
-    parser.add_argument("--eval",  type=str)
     parser.add_argument("--dola-decoding",   action="store_true")
     parser.add_argument("--info-layer",   type=int)
     parser.add_argument("--download", action="store_true", help="Whether to download the dataset if it doesn't exist. (Default: False)")
@@ -49,7 +48,7 @@ def main(args):
     #split val and test set    
     if SAMPLE==True:  
         total_data_count = len(dataset)
-        idx_file_path = f'./plot/outputs/sampled_idx_{args.dataset}.npy'
+        idx_file_path = f'./output/sampled_idx_{args.dataset}.npy'
         if os.path.exists(idx_file_path):
             sampled_indices = np.load(idx_file_path).tolist()
         else:
@@ -77,11 +76,13 @@ def main(args):
 
     elif args.dataset in ['Controlled_Images_B','Controlled_Images_A']:    
         scores = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)    
-        
+        dataset.evaluate_scores(scores,args.output_dir,dataset,model,args.method,args.weight,sampled_indices,args.option)
+        dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.method,args.weight,args.model_name,args.option)
+
     else:
         
         scores,correct_id = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.method,args.weight,args.option)
-        dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.method,args.eval,args.weight,args.model_name,args.option)
+        dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.method,args.weight,args.model_name,args.option)
 
         
 if __name__ == "__main__":

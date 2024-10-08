@@ -45,7 +45,7 @@ else:
         "LLaMAPreTrainedModel",
     ]
     _import_structure["modeling_llama_add_attn"] = [
-        "LLaMAForCausalLMAddAttn",
+        "LLaMAForCausalLMScal",
         "LLaMAModel",
         "LLaMAPreTrainedModel",
     ]
@@ -74,7 +74,7 @@ if TYPE_CHECKING:
             LLaMAPreTrainedModel,
         )
         from .modeling_llama_add_attn import (
-            LLaMAForCausalLMAddAttn,
+            LLaMAForCausalLMScal,
             LLaMAModel,
             LLaMAPreTrainedModel,
         )

@@ -267,7 +267,6 @@ class LLaMAAttention(nn.Module):
 
         ######ATTENTION#######
         if idx<32:
-            # pdb.set_trace()
             if attn_weights.size()[2]==attn_weights.size()[3]:
                 true_indices = torch.where(keys)[True]
                 if len(true_indices) == 0:
@@ -284,138 +283,13 @@ class LLaMAAttention(nn.Module):
                         mask[-1,start_idx:start_idx + square_size] = True
                         # mask[start_idx:start_idx + square_size,start_idx:start_idx + square_size] = True
                     # pdb.set_trace()
-                    if adjust_method == 'add_weight':
-                        # pdb.set_trace()
-                        # attn_weights[:, :, mask] *= weight
-                        attn_weights[:, :, mask] *= weight
-                    elif adjust_method == 'adaptive':
-                        # Step 1: Apply the mask on the last two dimensions
-                        masked_attn_weights = attn_weights[:, :, mask]  # Apply mask on the last two dimensions, [1,head_num,-1,576]
-
-                        # Step 2: Calculate skewness along the head dimension (32) after applying the mask
-                        mean = torch.mean(masked_attn_weights, dim=2, keepdim=True)  # Calculate mean along head dimension (32)
-                        std = torch.std(masked_attn_weights, dim=2, keepdim=True)    # Calculate std along head dimension (32)
-                        skewness = torch.mean(((masked_attn_weights - mean) / std) ** 3, dim=2, keepdim=True)  # Skewness along head dimension (32)
-                        
-                        # Add a small epsilon value before taking the logarithm to avoid NaNs
-                        epsilon = 1e-10
-                        masked_attn_weights_normalized = torch.nn.functional.softmax(masked_attn_weights, dim=2)
-                        # masked_attn_weights_normalized = torch.nn.functional.normalize(masked_attn_weights, dim=2)
-
-
-                        # Calculate entropy for each head (32 heads)
-                        entropy = -torch.sum(masked_attn_weights_normalized * torch.log(masked_attn_weights_normalized), dim=2,keepdim=True)
-
-                        # # Check entropy values
-                        # threshold = 5.5  # Example threshold
-                        # # pdb.set_trace()
-                        # high_skew_mask = entropy > threshold
-                        # low_skew_mask = entropy <= threshold
-
-                        #######HEAD SKEW############
-                        
-                        # Create masks based on the skewness condition
-                        high_skew_mask = skewness > 0  # High skewness mask
-                        low_skew_mask = ~high_skew_mask  # Low skewness mask
-                        # pdb.set_trace
-                        
-                        # high_skew_mask = skewness >= torch.quantile(skewness, 0.75)
-                        # low_skew_mask = ~high_skew_mask  # Low skewness mask
-                        # low_skew_mask = skewness <= torch.quantile(skewness, 0.5)
-
-
-                        # Step 3: Apply the skewness-based adjustment and mask simultaneously
-                        # Reshape skewness masks to apply to the correct dimensions
-                        high_skew_mask = high_skew_mask.expand_as(masked_attn_weights)  # Shape: [1, 32, 652]
-                        low_skew_mask = low_skew_mask.expand_as(masked_attn_weights)    # Shape: [1, 32, 652]
-                        
-                        # Step 4: Combine skewness-based adjustment with the masked attention weights
-                        # attn_weights[:, :, mask] *= high_skew_mask * 0.8 + low_skew_mask * 1.5
-                        attn_weights[:, :, mask] *= high_skew_mask * 1.5 + low_skew_mask * 0.8
-
-                        # pdb.set_trace()
-                        #######HEAD SKEW############
-                        
-                        '''
-                        #######LAYER SKEW############
-                        # Step 3: Calculate the mean skewness across the entire attention tensor
-                        mean_skewness = skewness.mean()  # Mean skewness of the entire tensor
-
-                        # Step 4: Apply the skewness-based adjustment globally
-                        if mean_skewness > 0:
-                            adjustment_factor = 1.5
-                        else:
-                            adjustment_factor = 0.5
-
-                        # Step 5: Apply the adjustment factor to the attention weights
-                        attn_weights[:, :, mask] *= adjustment_factor
-                        #######LAYER SKEW############
-                        '''
-                        '''
-                        ######HEAD STD#########
-                        # Create masks based on the standard deviation condition
-                        high_std_mask = std > torch.mean(std)  # High std mask (e.g., std greater than the mean std across heads)
-                        low_std_mask = ~high_std_mask  # Low std mask
-                        
-                        # Step 3: Apply the standard deviation-based adjustment and mask simultaneously
-                        # Reshape std masks to apply to the correct dimensions
-                        high_std_mask = high_std_mask.expand_as(masked_attn_weights)  # Shape: [1, 32, 652]
-                        low_std_mask = low_std_mask.expand_as(masked_attn_weights)    # Shape: [1, 32, 652]
-
-                        # Combine std-based adjustment with the masked attention weights
-                        attn_weights[:, :, mask] *= high_std_mask * 1.5 + low_std_mask * 0.5
-                        ######HEAD STD#########
-                        '''
-                        '''
-                        #######LAYER STD############
-                        # Step 3: Calculate the mean skewness across the entire attention tensor
-                        mean_std = std.mean()  # Mean skewness of the entire tensor
-                        if idx==15:
-                            pdb.set_trace()
-                            pass
-                        # Step 4: Apply the skewness-based adjustment globally
-                        if mean_std > 0.5:
-                            adjustment_factor = 1.5
-                        else:
-                            adjustment_factor = 0.5
-
-                        # Step 5: Apply the adjustment factor to the attention weights
-                        attn_weights[:, :, mask] *= adjustment_factor
-                        #######LAYER SKEW############
-                        '''
-                    elif adjust_method =='larger0add':
-                        sub_matrix = attn_weights[:, :, -1, start_idx:start_idx + square_size]  #shape:torch.Size([1, 32, 576])
-                        mask_larger_0 = sub_matrix > 0   #shape:torch.Size([1, 32, 576])
-                        sub_matrix[mask_larger_0] *= weight
-                        attn_weights[:, :, -1, start_idx:start_idx + square_size] = sub_matrix
-
-                    elif adjust_method == 'larger0out':
-                        sub_matrix = attn_weights[:, :, -1, start_idx:start_idx + square_size]
-                        mask_larger_0 = sub_matrix > 0 
-                        sub_matrix.masked_fill_(mask_larger_0, float('-inf'))
-                        attn_weights[:, :, -1, start_idx:start_idx + square_size] = sub_matrix
-                    elif adjust_method == 'smaller0out':
-                        sub_matrix = attn_weights[:, :, -1, start_idx:start_idx + square_size]
-                        mask_smaller_0 = sub_matrix < 0 
-                        sub_matrix.masked_fill_(mask_smaller_0, float('-inf'))
-                        attn_weights[:, :, -1, start_idx:start_idx + square_size] = sub_matrix
-                    elif adjust_method == 'sub':
-                        sub_matrix = attn_weights[:, :, -1, start_idx:start_idx + square_size]
-                        if pos:
-                            pos_id = pos[idx][:, :, start_idx:start_idx + square_size]
-                            mask_not_pos_id = pos_id != 1
-                            sub_matrix.masked_fill_(mask_not_pos_id, float('-inf'))
-                            attn_weights[:, :, -1, start_idx:start_idx + square_size] = sub_matrix
-
-
-                    else:
-                        raise ValueError("Wrong adjust method {}".format(adjust_method))
+                    # pdb.set_trace()
+                    attn_weights[:, :, mask] *= weight
                     
             else:
                 # print("Not a square matrix, skipping. got size", attn_weights.size())
                 start_idx,end_idx,square_size = -1,-1,-1
 
-        ######ATTENTION#######
         if attention_mask is not None:
             if attention_mask.size() != (bsz, 1, q_len, kv_seq_len):
                 raise ValueError(
@@ -440,29 +314,9 @@ class LLaMAAttention(nn.Module):
             unchanged_attn_weights = nn.functional.softmax(unchanged_attn_weights, dim=-1, dtype=torch.float32).to(
                 query_states.dtype)
 
-            
-            diff = attn_weights - unchanged_attn_weights
-            if caption_length:
-                # ensure that the other differences are all zero, no need to save
-                assert torch.all(diff[:,:,:-len(caption_length[0]),:]==0)
-                diff=diff[:,:,-len(caption_length[0]):,:]
-            else:
-                # ensure that the other differences are all zero, no need to save
-                assert torch.all(diff[:,:,:-1,:]==0)
-                diff=diff[:,:,-1,:]
-            
-            # pdb.set_trace()
-            if not SAVE_ORI:
-                np.save(f"{save_path}diff_{idx}_start{start_idx}_end{end_idx}.npy", diff.cpu().detach().numpy())
-            # save the start idx and square size
-            # np.save(f"{save_path}before_attn_weights_{idx}.npy", before_attn_weights.cpu().detach().numpy().astype(np.float16))
-            # np.save(f"{save_path}mask_{idx}.npy", mask.cpu().detach().numpy())
-
-        attn_weights = self.att_out(attn_weights)
-        # pdb.set_trace()
-        
+        attn_weights = self.att_out(attn_weights)       
         value_states = self.value_out(value_states)
-        # 
+
         attn_output = torch.matmul(attn_weights, value_states)
 
         if attn_output.size() != (bsz, self.num_heads, q_len, self.head_dim):
@@ -479,7 +333,6 @@ class LLaMAAttention(nn.Module):
         if not output_attentions:
             attn_weights = None
 
-        # return attn_output, attn_weights, past_key_value
         return attn_output, unchanged_attn_weights, past_key_value
 
 
@@ -892,7 +745,7 @@ class LLaMAModel(LLaMAPreTrainedModel):
         )
 
 
-class LLaMAForCausalLMAddAttn(LLaMAPreTrainedModel):
+class LLaMAForCausalLMScal(LLaMAPreTrainedModel):
     _keys_to_ignore_on_load_missing = [r"lm_head.weight"]
 
     def __init__(self, config):
