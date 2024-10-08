@@ -276,20 +276,21 @@
     <!--/ Abstract. -->
 
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered" font-size: 18px;">
-      <div class="column is-four-fifths">
-        <h1 class="title is-3">AdaptVis Framework</h1>
-        <p>The framework of ADAPTVIS. We adaptively intervene in the temperature of the attention logits of the image tokens.</p>
-          <p>1). For generations with high confidence, we trust the attention pattern and sharpen the attention distribution.</p> 
-          <p>2). For generations with low confidence, we smoothen the attention distribution to broaden the context window for better concentration on the correct objects.</p> 
-        
-          <div class="column is-four-fifths" style="justify-content: center;">
-        <figure><img src="./static/images/main.png" alt="Figure 1"></figure>
-          </div>
-
-      </div>
+<div class="columns is-centered has-text-left" style="font-size: 18px;">
+  <div class="column is-four-fifths">
+    <h1 class="title is-3 has-text-centered">AdaptVis Framework</h1>
+    <div class="content">
+      <p>The framework of ADAPTVIS. We adaptively intervene in the temperature of the attention logits of the image tokens.</p>
+      <p>1). For generations with high confidence, we trust the attention pattern and sharpen the attention distribution.</p> 
+      <p>2). For generations with low confidence, we smoothen the attention distribution to broaden the context window for better concentration on the correct objects.</p> 
     </div>
-    <!--/ Abstract. -->
+    <div class="column is-four-fifths has-text-centered" style="display: flex; justify-content: center;">
+      <figure><img src="./static/images/main.png" alt="Figure 1"></figure>
+    </div>
+  </div>
+</div>
+<!--/ Abstract. -->
+
 
   <div class="columns is-centered has-text-centered" font-size: 18px;">
       <div class="column is-four-fifths">
