@@ -280,7 +280,13 @@
       <div class="column is-four-fifths">
         <h1 class="title is-3">AdaptVis Framework</h1>
         <div class="content has-text-justified">
-          <figure><img src="./static/images/main.png" alt="Figure 1"></figure>
+          
+          <p>The framework of ADAPTVIS. We adaptively intervene in the temperature of the attentionlogits of the image tokens.</p>
+          <p>1). For generations with high confidence, we trust the attention pattern and sharpen the attention distribution.</p> 
+          <p>2). For generations with low confidence, we smoothen the attention distribution to broaden the context window for better concentration on the correct objects.</p> 
+        <div class="column is-three-fifths">
+           <figure><img src="./static/images/main.png" alt="Figure 1"></figure>
+          </div>
         </div>
       </div>
     </div>
