@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AdaptVis: Spatial Understanding in Vision-Language Models Requires Adaptive Attention">
+  <meta name="keywords" content="VLMs, Spatial Understanding, Mechanistic Interpretability">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdaptVis: Spatial Understanding in Vision-Language Models Requires Adaptive Attention</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/felm_emoji.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <!--
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+      -->
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">AdaptVis: <br> Spatial Understanding in Vision-Language<br> Models Requires Adaptive Attention</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=4Tg7zOMAAAAJ&hl=zh-CN">Shiqi Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=0lElpOcAAAAJ&hl=en">Tongyao Zhu</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=1ZUgQ58AAAAJ&hl=zh-CN">Ruochen Zhou</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/gaosiyang/home">Siyang Gao</a><sup>1</sup>,
+            </span>
+            <br>
+             <span class="author-block">
+              <a href="http://www.niebles.net/">Juan Carlos Niebles</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://mega002.github.io/">Mor Geva</a><sup>6</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jxhe.github.io/">Junxian He</a><sup>7</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jiajunwu.com/">Jiajun Wu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://limanling.github.io/">Manling Li</a><sup>2,5</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>City University of Hong Kong</span>
+            <span class="author-block"><sup>2</sup>Stanford University</span>
+            <span class="author-block"><sup>3</sup>Salesforce Research</span>
+            <span class="author-block"><sup>4</sup>National University of Singapore</span>
+            <span class="author-block"><sup>5</sup>Northwestern University</span>
+            <span class="author-block"><sup>6</sup>Tel Aviv University</span>
+            <span class="author-block"><sup>7</sup>Hong Kong University of Science and Technology</span>
+          </div>
+
+          <div class="column has-text-centered">
+              <!-- Video Link. -->
+
+              <!--
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              -->
+              
+              <!-- Code Link. -->
+            <span class="link-block">
+                <a href="http://arxiv.org/abs/2310.00741"
+                   class="external-link button is-normal is-rounded is-link">
+                   <!-- <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span> -->
+                  <span>&#128214</span>
+                  <span>Paper</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/hkust-nlp/felm"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/hkust-nlp/felm"
+                   class="external-link button is-normal is-rounded is-warning">
+                   <!-- <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span> -->
+                  <span>&#129303</span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered" font-size: 18px;">
+      <div class="column is-four-fifths">
+        <h1 class="title is-3">Abstract</h1>
+        <div class="content has-text-justified">
+          <p><strong>ADAPTVIS</strong> is a novel decoding method to enhance spatial reasoning in Vision Language Models (VLMs).</p>
+          <p>Spatial reasoning is a critical challenge for VLMs, with simple tasks like recognizing “under” or “behind” relationships often proving difficult. Understanding these challenges requires examining how image and text tokens interact within the model. Our analysis reveals that errors frequently arise from attention being directed towards irrelevant regions in the image. Furthermore, VLMs exhibit different attention patterns when handling familiar versus unfamiliar spatial relationships. To address this, we propose <strong>ADAPTVIS, which leverages inference-time confidence scores to refine attention distribution.</strong> When the model is confident, ADAPTVIS sharpens attention on relevant regions; when confidence is low, it broadens the attention to capture wider context.</p>
+          <p>ADAPTVIS achieves significant improvements, with up to a 50-point gain on spatial reasoning benchmarks like WhatsUp and VSR, all with negligible computational overhead.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered" font-size: 18px;">
+      <div class="column is-four-fifths">
+        <h1 class="title is-3">AdaptVis Framework</h1>
+        <div class="content has-text-justified">
+          <figure><img src="./static/images/main.png" alt="Figure 1"></figure>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  <div class="columns is-centered has-text-centered" font-size: 18px;">
+      <div class="column is-four-fifths">
+        <h1 class="title is-3">Examples</h1>
+        <div class="content has-text-justified">
+          <h4>Examples for confident samples</h4>
+          <br>
+          <div class="columns is-centered has-text-centered" style="font-size: 18px;">
+              <h1 class="title is-3"></h1>
+              <div class="columns">
+                <!-- Left image column -->
+                <div class="column">
+                  <figure>
+                    <img src="./static/images/2-man.png" alt="Figure 1" style="width: 100%; height: auto;">
+                  </figure>
+                </div>
+                <!-- Right image column -->
+                <div class="column">
+                  <figure>
+                    <img src="./static/images/2-bicycle.png" alt="Figure 2" style="width: 100%; height: auto;">
+                  </figure>
+                </div>
+            </div>
+          </div>
+          
+
+          <h4>Examples for inconfident samples</h4>
+          <br>
+          <div class="columns is-centered has-text-centered" style="font-size: 18px;">
+              <h1 class="title is-3"></h1>
+              <div class="columns">
+                <!-- Left image column -->
+                <div class="column">
+                  <figure>
+                    <img src="./static/images/0.5-mug.png" alt="Figure 1" style="width: 100%; height: auto;">
+                  </figure>
+                </div>
+                <!-- Right image column -->
+                <div class="column">
+                  <figure>
+                    <img src="./static/images/0.5-remote.png" alt="Figure 2" style="width: 100%; height: auto;">
+                  </figure>
+                </div>
+            </div>
+          </div>
+          
+
+
+
+
+        </div>
+      </div>
+  </div>
+  
+    <!-- Leaderboard. -->
+    <div class="columns is-centered has-text-centered" style="font-size: 18px;">
+      <div class="column is-four-fifths">
+          <h1 class="title is-3">Our experiment results</h1>
+          <div class="content has-text-justified">
+            <p> Blue rows show the baslines.</p>
+            <p> Green rows are ScalingVis results, yellow rows are AdaptVis results.</p>
+            <style>
+              table {
+                  font-size: 14px; /* Adjust the font size as needed */
+              }
+          </style>
+            <table border="1" cellspacing="0" cellpadding="5">
+                <thead>
+                  <tr>
+                      <th rowspan="2">Model</th>
+                      <th colspan="6">What's Up</th>
+                      <th colspan="2">VSR</th>
+                  </tr>
+                  <tr>
+                      <th>Controlled_A Acc</th>
+                      <th>Controlled_B Acc</th>
+                      <th>COCO_one</th>
+                      <th>COCO_two</th>
+                      <th>VQ_one</th>
+                      <th>VQ_two</th>
+                      <th>Exact Match</th>
+                      <th>F1 Score</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- LLAVA-1.5 row with a custom background color -->
+                  <tr style="background-color: #F0F8FF;">
+                      <td>LLAVA-1.5</td>
+                      <td>60.3</td>
+                      <td>73.1</td>
+                      <td>53.0</td>
+                      <td>58.2</td>
+                      <td>35.9</td>
+                      <td>40.8</td>
+                      <td>62.4</td>
+                      <td>51.3</td>
+                  </tr>
+                  <tr>
+                      <td>+VCD</td>
+                      <td>61.5 <span style="color: green;">↑1.2</span></td>
+                      <td>73.4 <span style="color: green;">↑0.3</span></td>
+                      <td>53.3 <span style="color: green;">↑0.3</span></td>
+                      <td>58.2</td>
+                      <td>35.8 <span style="color: red;">↓0.1</span></td>
+                      <td>42.5 <span style="color: green;">↑1.7</span></td>
+                      <td>62.4</td>
+                      <td>50.6 <span style="color: red;">↓0.7</span></td>
+                  </tr>
+                  <tr>
+                      <td>+Dola</td>
+                      <td>61.2 <span style="color: green;">↑0.9</span></td>
+                      <td>73.4 <span style="color: green;">↑0.3</span></td>
+                      <td>53.7 <span style="color: green;">↑0.7</span></td>
+                      <td>57.5 <span style="color: red;">↓0.7</span></td>
+                      <td>36.2 <span style="color: green;">↑0.3</span></td>
+                      <td>42.1 <span style="color: green;">↑1.3</span></td>
+                      <td>62.8 <span style="color: green;">↑0.4</span></td>
+                      <td>53.2 <span style="color: green;">↑1.9</span></td>
+                  </tr>
+                  <!-- SCALINGVIS row with a unique highlight color -->
+                  <tr style="background-color: #fffdf0;">
+                      <td>+ScalingVis</td>
+                      <td>64.5 <span style="color: green;">↑4.2</span></td>
+                      <td>75.2 <span style="color: green;">↑2.1</span></td>
+                      <td>53.6 <span style="color: green;">↑0.6</span></td>
+                      <td>59.4 <span style="color: green;">↑1.2</span></td>
+                      <td>42.7 <span style="color: green;">↑6.8</span></td>
+                      <td>48.1 <span style="color: green;">↑7.3</span></td>
+                      <td>64.9 <span style="color: green;">↑2.5</span></td>
+                      <td>62.5 <span style="color: green;">↑11.2</span></td>
+                  </tr>
+                  <!-- ADAPTVIS row with another unique highlight color -->
+                  <tr style="background-color: #fff0f8;">
+                      <td>+AdaptVis</td>
+                      <td>84.9 <span style="color: green;">↑24.6</span></td>
+                      <td>83.8 <span style="color: green;">↑10.7</span></td>
+                      <td>53.6 <span style="color: green;">↑0.6</span></td>
+                      <td>59.9 <span style="color: green;">↑1.7</span></td>
+                      <td>42.7 <span style="color: green;">↑6.8</span></td>
+                      <td>48.1 <span style="color: green;">↑7.3</span></td>
+                      <td>65.0 <span style="color: green;">↑2.6</span></td>
+                      <td>62.5 <span style="color: green;">↑11.2</span></td>
+                  </tr>
+                  <!-- LLAVA-1.6 row with a custom background color -->
+                  <tr style="background-color: #F0F8FF;">
+                      <td>LLAVA-1.6</td>
+                      <td>48.2</td>
+                      <td>63.0</td>
+                      <td>59.7</td>
+                      <td>41.8</td>
+                      <td>31.6</td>
+                      <td>7.3</td>
+                      <td>58.8</td>
+                      <td>29.4</td>
+                  </tr>
+                  <tr>
+                      <td>+VCD</td>
+                      <td>61.8 <span style="color: green;">↑13.6</span></td>
+                      <td>65.4 <span style="color: green;">↑2.4</span></td>
+                      <td>60.6 <span style="color: green;">↑0.9</span></td>
+                      <td>44.9 <span style="color: green;">↑3.1</span></td>
+                      <td>33.8 <span style="color: green;">↑2.2</span></td>
+                      <td>11.6 <span style="color: green;">↑4.3</span></td>
+                      <td>58.8</td>
+                      <td>29.4</td>
+                  </tr>
+                  <tr>
+                      <td>+Dola</td>
+                      <td>48.2</td>
+                      <td>62.7 <span style="color: red;">↓0.3</span></td>
+                      <td>59.7</td>
+                      <td>41.5 <span style="color: red;">↓0.3</span></td>
+                      <td>31.5 <span style="color: red;">↓0.1</span></td>
+                      <td>7.3</td>
+                      <td>59.3 <span style="color: green;">↑0.5</span></td>
+                      <td>31.2 <span style="color: green;">↑1.8</span></td>
+                  </tr>
+                  <!-- SCALINGVIS row with a unique highlight color -->
+                  <tr style="background-color: #fffdf0;">
+                      <td>+ScalingVis</td>
+                      <td>97.0 <span style="color: green;">↑48.8</span></td>
+                      <td>73.4 <span style="color: green;">↑10.4</span></td>
+                      <td>63.1 <span style="color: green;">↑3.4</span></td>
+                      <td>47.7 <span style="color: green;">↑5.9</span></td>
+                      <td>38.2 <span style="color: green;">↑6.6</span></td>
+                      <td>14.6 <span style="color: green;">↑7.3</span></td>
+                      <td>59.1 <span style="color: green;">↑0.3</span></td>
+                      <td>30.6 <span style="color: green;">↑1.2</span></td>
+                  </tr>
+                  <!-- ADAPTVIS row with another unique highlight color -->
+                  <tr style="background-color: #fff0f8;">
+                      <td>+AdaptVis</td>
+                      <td>98.2 <span style="color: green;">↑50.0</span></td>
+                      <td>73.4 <span style="color: green;">↑10.4</span></td>
+                      <td>63.1 <span style="color: green;">↑3.4</span></td>
+                      <td>47.7 <span style="color: green;">↑5.9</span></td>
+                      <td>35.2 <span style="color: green;">↑3.6</span></td>
+                      <td>17.2 <span style="color: green;">↑9.9</span></td>
+                      <td>62.7 <span style="color: green;">↑3.9</span></td>
+                      <td>39.3 <span style="color: green;">↑9.9</span></td>
+                  </tr>
+              </tbody>
+              
+
+              
+              
+          
+        </tbody>
+    </table>
+          </div>
+      </div>
+    </div>
+    <!--/ Leaderboard. -->
+  
+    <!--/ Matting. -->
+    <!-- Concurrent Work. -->
+<!--
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+chen2024adaptvis,
+title={FELM: Benchmarking Factuality Evaluation of Large Language Models},
+author={Chen, Shiqi and Zhao, Yiran and Zhang, Jinghan and Chern, I-Chun and Gao, Siyang and Liu, Pengfei and He, Junxian},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+year={2023},
+url={http://arxiv.org/abs/2310.00741}
+}
+
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+ <!--
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+</body>
+</html>
