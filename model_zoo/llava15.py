@@ -294,7 +294,7 @@ class LlavaWrapper:
         correct_id = []  # Track indices of correct predictions
 
         # Determine the correct question-answer file based on the dataset
-        qst_ans_file = f'/home/user/ruochen/mmlm_mech/whatsup_vlms/prompts/{dataset}_with_answer_{option}_options.jsonl'
+        qst_ans_file = f'prompts/{dataset}_with_answer_{option}_options.jsonl'
         
         # Load prompts and answers from the question-answer file
         with open(qst_ans_file, 'r') as file:
@@ -306,7 +306,7 @@ class LlavaWrapper:
                 data = json.loads(line)
                 # Select prompt based on mode
                 
-                prompt_list.append(data["begin"])
+                prompt_list.append(data["question"])
                 
                 # Store additional prompts if adjustment method is 'sub'
                 
@@ -340,7 +340,7 @@ class LlavaWrapper:
             answer_list = [answer_list[i] for i in sampled_indices]
 
         # Create directory for saving attention maps
-        save_attn_dir = f"/home/user/shiqi/mmlm_mech/whatsup_vlms/outputs/{dataset}_weight{weight:.2f}"
+        save_attn_dir = f"/outputs/{dataset}_weight{weight:.2f}"
         os.makedirs(save_attn_dir, exist_ok=True)
 
         results = []  # Store results for each generated sequence
@@ -460,7 +460,7 @@ class LlavaWrapper:
         # Concatenate all scores and return based on dataset type
         all_scores = np.concatenate(scores, axis=0)  # N x K x L
         if dataset in ['Controlled_Images_B', 'Controlled_Images_A']:
-            return all_scores
+            return (all_scores, [])
         else:
             return (acc / index_of_total, correct_id)
 
