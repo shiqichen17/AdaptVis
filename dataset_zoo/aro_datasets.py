@@ -336,7 +336,13 @@ class Controlled_Images(Dataset):
 
         return result_records
 
-
+    def save_scores(self, scores,correct_id,path,dataset,method,weight,model_name,option):
+        import json
+        path_=os.path.join(path, 'res.json')
+        data = {"dataset":dataset, "model":model_name,"option":option,"method":method,"weight":weight, "Individual accuracy":scores,"correct_id":correct_id}
+        with open(path_, 'a+') as file:
+            json.dump(data, file)
+            file.write('\n')
 class COCO_QA(Dataset):
     def __init__(self, image_preprocess, text_perturb_fn=None, image_perturb_fn=None, root_dir='data', download=False, subset='one'):
         self.root_dir = root_dir

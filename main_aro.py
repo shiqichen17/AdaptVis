@@ -75,9 +75,12 @@ def main(args):
    
 
     elif args.dataset in ['Controlled_Images_B','Controlled_Images_A']:    
-        scores = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)    
-        dataset.evaluate_scores(scores,args.output_dir,dataset,model,args.method,args.weight,sampled_indices,args.option)
-        dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.method,args.weight,args.model_name,args.option)
+        scores, correct_id = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)
+        print("Got the following shape of scores",scores.shape)
+        # change from (82, 4, 1) to (82, 1, 4)
+        scores = scores.transpose(0,2,1)
+        dataset.evaluate_scores(scores,args.output_dir,args.dataset, args.model_name,args.method,args.weight,sampled_indices,args.option)
+        # dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.method,args.weight,args.model_name,args.option)
 
     else:
         
