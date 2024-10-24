@@ -267,9 +267,9 @@
       <div class="column is-four-fifths">
         <h1 class="title is-3">Abstract</h1>
         <div class="content has-text-justified">
-          <p><strong>ADAPTVIS</strong> is a novel decoding method to enhance spatial reasoning in Vision Language Models (VLMs).</p>
-          <p>Spatial reasoning is a critical challenge for VLMs, with simple tasks like recognizing “under” or “behind” relationships often proving difficult. Understanding these challenges requires examining how image and text tokens interact within the model. Our analysis reveals that errors frequently arise from attention being directed towards irrelevant regions in the image. Furthermore, VLMs exhibit different attention patterns when handling familiar versus unfamiliar spatial relationships. To address this, we propose <strong>ADAPTVIS, which leverages inference-time confidence scores to refine attention distribution.</strong> When the model is confident, ADAPTVIS sharpens attention on relevant regions; when confidence is low, it broadens the attention to capture wider context.</p>
-          <p>ADAPTVIS achieves significant improvements, with up to a 50-point gain on spatial reasoning benchmarks like WhatsUp and VSR, all with negligible computational overhead.</p>
+          <p><strong>AdaptVis</strong> is a novel decoding method to enhance spatial reasoning in Vision Language Models (VLMs).</p>
+          <p>Spatial reasoning is a critical challenge for VLMs, with simple tasks like recognizing “under” or “behind” relationships often proving difficult. Understanding these challenges requires examining how image and text tokens interact within the model. Our analysis reveals that errors frequently arise from attention being directed towards irrelevant regions in the image. Furthermore, VLMs exhibit different attention patterns when handling familiar versus unfamiliar spatial relationships. To address this, we propose <strong>AdaptVis, which leverages inference-time confidence scores to refine attention distribution.</strong> When the model is confident, AdaptVis sharpens attention on relevant regions; when confidence is low, it broadens the attention to capture wider context.</p>
+          <p>AdaptVis achieves significant improvements, with up to a 50-point gain on spatial reasoning benchmarks like WhatsUp and VSR, all with negligible computational overhead.</p>
         </div>
       </div>
     </div>
@@ -280,7 +280,7 @@
   <div class="column is-four-fifths">
     <h1 class="title is-3 has-text-centered">AdaptVis Framework</h1>
     <div class="content has-text-left">
-      <p>The framework of ADAPTVIS. We adaptively intervene in the temperature of the attention logits of the image tokens.</p>
+      <p>The framework of AdaptVis. We adaptively intervene in the temperature of the attention logits of the image tokens.</p>
       <p>1). For generations with high confidence, we trust the attention pattern and sharpen the attention distribution.</p> 
       <p>2). For generations with low confidence, we smoothen the attention distribution to broaden the context window for better concentration on the correct objects.</p> 
     </div>
